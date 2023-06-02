@@ -15,21 +15,26 @@ addTodo.addEventListener ("click", (event) => {
         
         alert("You have not put in any information, please enter what is on your to do list")
     }
-
-localStorage.getItem("toDoList", JSON.stringify(list))
+    list.forEach((item)=>{
+        document.getElementById ("displayList").innerHTML += `
+            <li type>${item}</li>
+            `
+    }) 
+    
+localStorage.setItem("toDoList", JSON.stringify(list))
 });
 
 
 
-displayList.innerHTML = "";
-showTodo.addEventListener ("click", (e)=>{
-    e.preventDefault()
-    list.forEach((item)=>{
-        document.getElementById ("displayList").innerHTML += `
-            <li>${item}</li>`
-    })
-        localStorage.setItem("toDoList", JSON.stringify(list))
-})
+// displayList.innerHTML = "";
+// showTodo.addEventListener ("click", (e)=>{
+//     e.preventDefault()
+//     list.forEach((item)=>{
+//         document.getElementById ("displayList").innerHTML += `
+//             <li>${item}</li>`
+//     })
+//         localStorage.setItem("toDoList", JSON.stringify(list))
+
 
 
 //sorting
@@ -39,7 +44,6 @@ sortList.addEventListener ("click", (e)=>{
     list.forEach((item)=>{
     document.getElementById ("displayList").innerHTML += `
     <li>${list.sort()}</li>`
-    //console.log(list.sort())
     })
     localStorage.setItem("toDoList", JSON.stringify(list))
 

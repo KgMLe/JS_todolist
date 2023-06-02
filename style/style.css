@@ -1,0 +1,55 @@
+.container{
+    border: 3rem solid violet;
+    padding: 3rem;
+    border-radius: 1rem;
+    height: 65vh;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    
+}
+
+#input{
+    height: 50px;
+    width: 30rem;
+    border: 3px solid indigo;
+    border-radius: 2px;
+}
+
+button{
+    padding: 10px;
+    background-color: violet;
+    border: 3px solid rgb(149, 0, 255);
+    cursor: pointer;
+}
+
+button:hover{
+    color: blueviolet;
+}
+
+.ul{
+    border: 3px solid rgb(149, 0, 255);
+    border-radius: 2px;
+}
+
+
+@media (max-width: 700px) {
+    #input{
+        height: 50px;
+        width: 10rem;
+        border: 3px solid rgb(149, 0, 255);
+        border-radius: 2px;
+    }
+
+    body{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        
+    }
+  }
